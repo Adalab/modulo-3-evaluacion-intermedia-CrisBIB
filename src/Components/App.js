@@ -14,6 +14,7 @@ class App extends React.Component {
     console.log(this.state);
     return (
       <div className="App">
+        <h1 className="title">Mi lista de pokemon</h1>
         <PokeList pokemonData={this.state.PokemonData} />
       </div>
     );

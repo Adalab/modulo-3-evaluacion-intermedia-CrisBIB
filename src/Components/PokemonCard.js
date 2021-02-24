@@ -2,14 +2,16 @@ import "../Styles/App.scss";
 
 const PokemonCard = (props) => {
   const types = props.infoPokemon.types.map((type, i) => (
-    <li key={i}>{type}</li>
+    <li key={i} className="eachType">
+      {type}
+    </li>
   ));
   return (
-    <div className="pokemonCard">
+    <>
       <img src={props.infoPokemon.url} alt="" />
-      <h2>{props.infoPokemon.name}</h2>
-      <ul className="pokemonList">{types}</ul>
-    </div>
+      <h3 className="pokemonName">{props.infoPokemon.name}</h3>
+      <ul className="pokemonTypes">{types}</ul>
+    </>
   );
 };
 
