@@ -21,6 +21,8 @@ const PokemonCard = (props) => {
   ));
   const handleClick = () => {
     checkFavorite();
+    const pokemonId = props.infoPokemon.id;
+    props.handleFavorites(pokemonId);
   };
   return (
     <article onClick={handleClick}>

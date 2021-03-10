@@ -9,11 +9,27 @@ class PokeList extends React.Component {
     const eachPokemon = this.props.pokemonData.map((pokemonItem) => {
       return (
         <li key={pokemonItem.id} className="eachPokemon">
-          <PokemonCard infoPokemon={pokemonItem} />
+          <PokemonCard
+            handleFavorites={this.props.handleFavorites}
+            infoPokemon={pokemonItem}
+          />
         </li>
       );
     });
-    return <ul className="pokemonList">{eachPokemon}</ul>;
+    const eachFavorite = this.props.favorites.map((favorite) => {
+      return (
+        <li key={favorite.id}>
+          <img src={favorite.url} alt={"Imageden de: " + favorite.name} />
+        </li>
+      );
+    });
+    return (
+      <div>
+        <ul className="pokemonList">{eachPokemon}</ul>
+        <h3>Mis Pokemons favorito son...</h3>
+        <ul className="favoritesList">{eachFavorite}</ul>
+      </div>
+    );
   }
 }
 export default PokeList;

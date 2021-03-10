@@ -21,3 +21,17 @@
   height: 200px;
   width: 130px;
 }
+
+.favoritesList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  list-style: none;
+  padding: 0;
+  justify-items: center;
+  @media all and (min-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media all and (min-width: 1028px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
