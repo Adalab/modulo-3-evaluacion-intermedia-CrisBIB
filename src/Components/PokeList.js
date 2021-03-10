@@ -26,7 +26,7 @@ class PokeList extends React.Component {
     return (
       <div>
         <ul className="pokemonList">{eachPokemon}</ul>
-        <h3>Mis Pokemons favorito son...</h3>
+        <h3>Mis Pokemons favoritos son...</h3>
         <ul className="favoritesList">{eachFavorite}</ul>
       </div>
     );
