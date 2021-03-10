@@ -1,0 +1,23 @@
+.pokemonList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  list-style: none;
+  padding: 0;
+  justify-items: center;
+  @media all and (min-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media all and (min-width: 1028px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.eachPokemon {
+  background: rgb(216, 231, 231);
+  border-radius: 5%;
+  border: solid 1px grey;
+  margin: 10px 10px;
+  text-align: center;
+  height: 200px;
+  width: 130px;
+}
